@@ -1,0 +1,662 @@
+C:.
+|   treelista.txt
+|   
+\---extended_workbench-1.21-1.2.3
+    |   extended_workbench.mixins.json
+    |   pack.mcmeta
+    |   
+    +---assets
+    |   +---extended_workbench
+    |   |   +---atlases
+    |   |   |       shield_patterns.json
+    |   |   |       
+    |   |   +---lang
+    |   |   |       en_us.json
+    |   |   |       es_ar.json
+    |   |   |       es_cl.json
+    |   |   |       es_ec.json
+    |   |   |       es_es.json
+    |   |   |       es_mx.json
+    |   |   |       es_uy.json
+    |   |   |       es_ve.json
+    |   |   |       
+    |   |   +---models
+    |   |   |   +---block
+    |   |   |   |       crafting_table_1.json
+    |   |   |   |       crafting_table_2.json
+    |   |   |   |       crafting_table_3.json
+    |   |   |   |       crafting_table_4.json
+    |   |   |   |       
+    |   |   |   \---item
+    |   |   |       |   extended_bow.json
+    |   |   |       |   extended_bow_pulling_0.json
+    |   |   |       |   extended_bow_pulling_1.json
+    |   |   |       |   extended_bow_pulling_2.json
+    |   |   |       |   extended_bow_pulling_3.json
+    |   |   |       |   extended_chainmail_boots.json
+    |   |   |       |   extended_chainmail_boots_amethyst_trim.json
+    |   |   |       |   extended_chainmail_boots_copper_trim.json
+    |   |   |       |   extended_chainmail_boots_diamond_trim.json
+    |   |   |       |   extended_chainmail_boots_emerald_trim.json
+    |   |   |       |   extended_chainmail_boots_gold_trim.json
+    |   |   |       |   extended_chainmail_boots_iron_trim.json
+    |   |   |       |   extended_chainmail_boots_lapis_trim.json
+    |   |   |       |   extended_chainmail_boots_netherite_trim.json
+    |   |   |       |   extended_chainmail_boots_quartz_trim.json
+    |   |   |       |   extended_chainmail_boots_redstone_trim.json
+    |   |   |       |   extended_chainmail_chestplate.json
+    |   |   |       |   extended_chainmail_chestplate_amethyst_trim.json
+    |   |   |       |   extended_chainmail_chestplate_copper_trim.json
+    |   |   |       |   extended_chainmail_chestplate_diamond_trim.json
+    |   |   |       |   extended_chainmail_chestplate_emerald_trim.json
+    |   |   |       |   extended_chainmail_chestplate_gold_trim.json
+    |   |   |       |   extended_chainmail_chestplate_iron_trim.json
+    |   |   |       |   extended_chainmail_chestplate_lapis_trim.json
+    |   |   |       |   extended_chainmail_chestplate_netherite_trim.json
+    |   |   |       |   extended_chainmail_chestplate_quartz_trim.json
+    |   |   |       |   extended_chainmail_chestplate_redstone_trim.json
+    |   |   |       |   extended_chainmail_helmet.json
+    |   |   |       |   extended_chainmail_helmet_amethyst_trim.json
+    |   |   |       |   extended_chainmail_helmet_copper_trim.json
+    |   |   |       |   extended_chainmail_helmet_diamond_trim.json
+    |   |   |       |   extended_chainmail_helmet_emerald_trim.json
+    |   |   |       |   extended_chainmail_helmet_gold_trim.json
+    |   |   |       |   extended_chainmail_helmet_iron_trim.json
+    |   |   |       |   extended_chainmail_helmet_lapis_trim.json
+    |   |   |       |   extended_chainmail_helmet_netherite_trim.json
+    |   |   |       |   extended_chainmail_helmet_quartz_trim.json
+    |   |   |       |   extended_chainmail_helmet_redstone_trim.json
+    |   |   |       |   extended_chainmail_leggings.json
+    |   |   |       |   extended_chainmail_leggings_amethyst_trim.json
+    |   |   |       |   extended_chainmail_leggings_copper_trim.json
+    |   |   |       |   extended_chainmail_leggings_diamond_trim.json
+    |   |   |       |   extended_chainmail_leggings_emerald_trim.json
+    |   |   |       |   extended_chainmail_leggings_gold_trim.json
+    |   |   |       |   extended_chainmail_leggings_iron_trim.json
+    |   |   |       |   extended_chainmail_leggings_lapis_trim.json
+    |   |   |       |   extended_chainmail_leggings_netherite_trim.json
+    |   |   |       |   extended_chainmail_leggings_quartz_trim.json
+    |   |   |       |   extended_chainmail_leggings_redstone_trim.json
+    |   |   |       |   extended_crossbow.json
+    |   |   |       |   extended_crossbow_arrow.json
+    |   |   |       |   extended_crossbow_firework.json
+    |   |   |       |   extended_crossbow_pulling_0.json
+    |   |   |       |   extended_crossbow_pulling_1.json
+    |   |   |       |   extended_crossbow_pulling_2.json
+    |   |   |       |   extended_crossbow_pulling_3.json
+    |   |   |       |   extended_diamond_axe.json
+    |   |   |       |   extended_diamond_boots.json
+    |   |   |       |   extended_diamond_boots_amethyst_trim.json
+    |   |   |       |   extended_diamond_boots_copper_trim.json
+    |   |   |       |   extended_diamond_boots_diamond_darker_trim.json
+    |   |   |       |   extended_diamond_boots_emerald_trim.json
+    |   |   |       |   extended_diamond_boots_gold_trim.json
+    |   |   |       |   extended_diamond_boots_iron_trim.json
+    |   |   |       |   extended_diamond_boots_lapis_trim.json
+    |   |   |       |   extended_diamond_boots_netherite_trim.json
+    |   |   |       |   extended_diamond_boots_quartz_trim.json
+    |   |   |       |   extended_diamond_boots_redstone_trim.json
+    |   |   |       |   extended_diamond_chestplate.json
+    |   |   |       |   extended_diamond_chestplate_amethyst_trim.json
+    |   |   |       |   extended_diamond_chestplate_copper_trim.json
+    |   |   |       |   extended_diamond_chestplate_diamond_darker_trim.json
+    |   |   |       |   extended_diamond_chestplate_emerald_trim.json
+    |   |   |       |   extended_diamond_chestplate_gold_trim.json
+    |   |   |       |   extended_diamond_chestplate_iron_trim.json
+    |   |   |       |   extended_diamond_chestplate_lapis_trim.json
+    |   |   |       |   extended_diamond_chestplate_netherite_trim.json
+    |   |   |       |   extended_diamond_chestplate_quartz_trim.json
+    |   |   |       |   extended_diamond_chestplate_redstone_trim.json
+    |   |   |       |   extended_diamond_helmet.json
+    |   |   |       |   extended_diamond_helmet_amethyst_trim.json
+    |   |   |       |   extended_diamond_helmet_copper_trim.json
+    |   |   |       |   extended_diamond_helmet_diamond_darker_trim.json
+    |   |   |       |   extended_diamond_helmet_emerald_trim.json
+    |   |   |       |   extended_diamond_helmet_gold_trim.json
+    |   |   |       |   extended_diamond_helmet_iron_trim.json
+    |   |   |       |   extended_diamond_helmet_lapis_trim.json
+    |   |   |       |   extended_diamond_helmet_netherite_trim.json
+    |   |   |       |   extended_diamond_helmet_quartz_trim.json
+    |   |   |       |   extended_diamond_helmet_redstone_trim.json
+    |   |   |       |   extended_diamond_hoe.json
+    |   |   |       |   extended_diamond_leggings.json
+    |   |   |       |   extended_diamond_leggings_amethyst_trim.json
+    |   |   |       |   extended_diamond_leggings_copper_trim.json
+    |   |   |       |   extended_diamond_leggings_diamond_darker_trim.json
+    |   |   |       |   extended_diamond_leggings_emerald_trim.json
+    |   |   |       |   extended_diamond_leggings_gold_trim.json
+    |   |   |       |   extended_diamond_leggings_iron_trim.json
+    |   |   |       |   extended_diamond_leggings_lapis_trim.json
+    |   |   |       |   extended_diamond_leggings_netherite_trim.json
+    |   |   |       |   extended_diamond_leggings_quartz_trim.json
+    |   |   |       |   extended_diamond_leggings_redstone_trim.json
+    |   |   |       |   extended_diamond_pickaxe.json
+    |   |   |       |   extended_diamond_shovel.json
+    |   |   |       |   extended_diamond_sword.json
+    |   |   |       |   extended_golden_axe.json
+    |   |   |       |   extended_golden_boots.json
+    |   |   |       |   extended_golden_boots_amethyst_trim.json
+    |   |   |       |   extended_golden_boots_copper_trim.json
+    |   |   |       |   extended_golden_boots_diamond_trim.json
+    |   |   |       |   extended_golden_boots_emerald_trim.json
+    |   |   |       |   extended_golden_boots_gold_darker_trim.json
+    |   |   |       |   extended_golden_boots_iron_trim.json
+    |   |   |       |   extended_golden_boots_lapis_trim.json
+    |   |   |       |   extended_golden_boots_netherite_trim.json
+    |   |   |       |   extended_golden_boots_quartz_trim.json
+    |   |   |       |   extended_golden_boots_redstone_trim.json
+    |   |   |       |   extended_golden_chestplate.json
+    |   |   |       |   extended_golden_chestplate_amethyst_trim.json
+    |   |   |       |   extended_golden_chestplate_copper_trim.json
+    |   |   |       |   extended_golden_chestplate_diamond_trim.json
+    |   |   |       |   extended_golden_chestplate_emerald_trim.json
+    |   |   |       |   extended_golden_chestplate_gold_darker_trim.json
+    |   |   |       |   extended_golden_chestplate_iron_trim.json
+    |   |   |       |   extended_golden_chestplate_lapis_trim.json
+    |   |   |       |   extended_golden_chestplate_netherite_trim.json
+    |   |   |       |   extended_golden_chestplate_quartz_trim.json
+    |   |   |       |   extended_golden_chestplate_redstone_trim.json
+    |   |   |       |   extended_golden_helmet.json
+    |   |   |       |   extended_golden_helmet_amethyst_trim.json
+    |   |   |       |   extended_golden_helmet_copper_trim.json
+    |   |   |       |   extended_golden_helmet_diamond_trim.json
+    |   |   |       |   extended_golden_helmet_emerald_trim.json
+    |   |   |       |   extended_golden_helmet_gold_darker_trim.json
+    |   |   |       |   extended_golden_helmet_iron_trim.json
+    |   |   |       |   extended_golden_helmet_lapis_trim.json
+    |   |   |       |   extended_golden_helmet_netherite_trim.json
+    |   |   |       |   extended_golden_helmet_quartz_trim.json
+    |   |   |       |   extended_golden_helmet_redstone_trim.json
+    |   |   |       |   extended_golden_hoe.json
+    |   |   |       |   extended_golden_leggings.json
+    |   |   |       |   extended_golden_leggings_amethyst_trim.json
+    |   |   |       |   extended_golden_leggings_copper_trim.json
+    |   |   |       |   extended_golden_leggings_diamond_trim.json
+    |   |   |       |   extended_golden_leggings_emerald_trim.json
+    |   |   |       |   extended_golden_leggings_gold_darker_trim.json
+    |   |   |       |   extended_golden_leggings_iron_trim.json
+    |   |   |       |   extended_golden_leggings_lapis_trim.json
+    |   |   |       |   extended_golden_leggings_netherite_trim.json
+    |   |   |       |   extended_golden_leggings_quartz_trim.json
+    |   |   |       |   extended_golden_leggings_redstone_trim.json
+    |   |   |       |   extended_golden_pickaxe.json
+    |   |   |       |   extended_golden_shovel.json
+    |   |   |       |   extended_golden_sword.json
+    |   |   |       |   extended_iron_axe.json
+    |   |   |       |   extended_iron_boots.json
+    |   |   |       |   extended_iron_boots_amethyst_trim.json
+    |   |   |       |   extended_iron_boots_copper_trim.json
+    |   |   |       |   extended_iron_boots_diamond_trim.json
+    |   |   |       |   extended_iron_boots_emerald_trim.json
+    |   |   |       |   extended_iron_boots_gold_trim.json
+    |   |   |       |   extended_iron_boots_iron_darker_trim.json
+    |   |   |       |   extended_iron_boots_lapis_trim.json
+    |   |   |       |   extended_iron_boots_netherite_trim.json
+    |   |   |       |   extended_iron_boots_quartz_trim.json
+    |   |   |       |   extended_iron_boots_redstone_trim.json
+    |   |   |       |   extended_iron_chestplate.json
+    |   |   |       |   extended_iron_chestplate_amethyst_trim.json
+    |   |   |       |   extended_iron_chestplate_copper_trim.json
+    |   |   |       |   extended_iron_chestplate_diamond_trim.json
+    |   |   |       |   extended_iron_chestplate_emerald_trim.json
+    |   |   |       |   extended_iron_chestplate_gold_trim.json
+    |   |   |       |   extended_iron_chestplate_iron_darker_trim.json
+    |   |   |       |   extended_iron_chestplate_lapis_trim.json
+    |   |   |       |   extended_iron_chestplate_netherite_trim.json
+    |   |   |       |   extended_iron_chestplate_quartz_trim.json
+    |   |   |       |   extended_iron_chestplate_redstone_trim.json
+    |   |   |       |   extended_iron_helmet.json
+    |   |   |       |   extended_iron_helmet_amethyst_trim.json
+    |   |   |       |   extended_iron_helmet_copper_trim.json
+    |   |   |       |   extended_iron_helmet_diamond_trim.json
+    |   |   |       |   extended_iron_helmet_emerald_trim.json
+    |   |   |       |   extended_iron_helmet_gold_trim.json
+    |   |   |       |   extended_iron_helmet_iron_darker_trim.json
+    |   |   |       |   extended_iron_helmet_lapis_trim.json
+    |   |   |       |   extended_iron_helmet_netherite_trim.json
+    |   |   |       |   extended_iron_helmet_quartz_trim.json
+    |   |   |       |   extended_iron_helmet_redstone_trim.json
+    |   |   |       |   extended_iron_hoe.json
+    |   |   |       |   extended_iron_leggings.json
+    |   |   |       |   extended_iron_leggings_amethyst_trim.json
+    |   |   |       |   extended_iron_leggings_copper_trim.json
+    |   |   |       |   extended_iron_leggings_diamond_trim.json
+    |   |   |       |   extended_iron_leggings_emerald_trim.json
+    |   |   |       |   extended_iron_leggings_gold_trim.json
+    |   |   |       |   extended_iron_leggings_iron_darker_trim.json
+    |   |   |       |   extended_iron_leggings_lapis_trim.json
+    |   |   |       |   extended_iron_leggings_netherite_trim.json
+    |   |   |       |   extended_iron_leggings_quartz_trim.json
+    |   |   |       |   extended_iron_leggings_redstone_trim.json
+    |   |   |       |   extended_iron_pickaxe.json
+    |   |   |       |   extended_iron_shovel.json
+    |   |   |       |   extended_iron_sword.json
+    |   |   |       |   extended_leather_boots.json
+    |   |   |       |   extended_leather_boots_amethyst_trim.json
+    |   |   |       |   extended_leather_boots_copper_trim.json
+    |   |   |       |   extended_leather_boots_diamond_trim.json
+    |   |   |       |   extended_leather_boots_emerald_trim.json
+    |   |   |       |   extended_leather_boots_gold_trim.json
+    |   |   |       |   extended_leather_boots_iron_trim.json
+    |   |   |       |   extended_leather_boots_lapis_trim.json
+    |   |   |       |   extended_leather_boots_netherite_trim.json
+    |   |   |       |   extended_leather_boots_quartz_trim.json
+    |   |   |       |   extended_leather_boots_redstone_trim.json
+    |   |   |       |   extended_leather_chestplate.json
+    |   |   |       |   extended_leather_chestplate_amethyst_trim.json
+    |   |   |       |   extended_leather_chestplate_copper_trim.json
+    |   |   |       |   extended_leather_chestplate_diamond_trim.json
+    |   |   |       |   extended_leather_chestplate_emerald_trim.json
+    |   |   |       |   extended_leather_chestplate_gold_trim.json
+    |   |   |       |   extended_leather_chestplate_iron_trim.json
+    |   |   |       |   extended_leather_chestplate_lapis_trim.json
+    |   |   |       |   extended_leather_chestplate_netherite_trim.json
+    |   |   |       |   extended_leather_chestplate_quartz_trim.json
+    |   |   |       |   extended_leather_chestplate_redstone_trim.json
+    |   |   |       |   extended_leather_helmet.json
+    |   |   |       |   extended_leather_helmet_amethyst_trim.json
+    |   |   |       |   extended_leather_helmet_copper_trim.json
+    |   |   |       |   extended_leather_helmet_diamond_trim.json
+    |   |   |       |   extended_leather_helmet_emerald_trim.json
+    |   |   |       |   extended_leather_helmet_gold_trim.json
+    |   |   |       |   extended_leather_helmet_iron_trim.json
+    |   |   |       |   extended_leather_helmet_lapis_trim.json
+    |   |   |       |   extended_leather_helmet_netherite_trim.json
+    |   |   |       |   extended_leather_helmet_quartz_trim.json
+    |   |   |       |   extended_leather_helmet_redstone_trim.json
+    |   |   |       |   extended_leather_leggings.json
+    |   |   |       |   extended_leather_leggings_amethyst_trim.json
+    |   |   |       |   extended_leather_leggings_copper_trim.json
+    |   |   |       |   extended_leather_leggings_diamond_trim.json
+    |   |   |       |   extended_leather_leggings_emerald_trim.json
+    |   |   |       |   extended_leather_leggings_gold_trim.json
+    |   |   |       |   extended_leather_leggings_iron_trim.json
+    |   |   |       |   extended_leather_leggings_lapis_trim.json
+    |   |   |       |   extended_leather_leggings_netherite_trim.json
+    |   |   |       |   extended_leather_leggings_quartz_trim.json
+    |   |   |       |   extended_leather_leggings_redstone_trim.json
+    |   |   |       |   extended_mace.json
+    |   |   |       |   extended_netherite_axe.json
+    |   |   |       |   extended_netherite_boots.json
+    |   |   |       |   extended_netherite_boots_amethyst_trim.json
+    |   |   |       |   extended_netherite_boots_copper_trim.json
+    |   |   |       |   extended_netherite_boots_diamond_trim.json
+    |   |   |       |   extended_netherite_boots_emerald_trim.json
+    |   |   |       |   extended_netherite_boots_gold_trim.json
+    |   |   |       |   extended_netherite_boots_iron_trim.json
+    |   |   |       |   extended_netherite_boots_lapis_trim.json
+    |   |   |       |   extended_netherite_boots_netherite_darker_trim.json
+    |   |   |       |   extended_netherite_boots_quartz_trim.json
+    |   |   |       |   extended_netherite_boots_redstone_trim.json
+    |   |   |       |   extended_netherite_chestplate.json
+    |   |   |       |   extended_netherite_chestplate_amethyst_trim.json
+    |   |   |       |   extended_netherite_chestplate_copper_trim.json
+    |   |   |       |   extended_netherite_chestplate_diamond_trim.json
+    |   |   |       |   extended_netherite_chestplate_emerald_trim.json
+    |   |   |       |   extended_netherite_chestplate_gold_trim.json
+    |   |   |       |   extended_netherite_chestplate_iron_trim.json
+    |   |   |       |   extended_netherite_chestplate_lapis_trim.json
+    |   |   |       |   extended_netherite_chestplate_netherite_darker_trim.json
+    |   |   |       |   extended_netherite_chestplate_quartz_trim.json
+    |   |   |       |   extended_netherite_chestplate_redstone_trim.json
+    |   |   |       |   extended_netherite_helmet.json
+    |   |   |       |   extended_netherite_helmet_amethyst_trim.json
+    |   |   |       |   extended_netherite_helmet_copper_trim.json
+    |   |   |       |   extended_netherite_helmet_diamond_trim.json
+    |   |   |       |   extended_netherite_helmet_emerald_trim.json
+    |   |   |       |   extended_netherite_helmet_gold_trim.json
+    |   |   |       |   extended_netherite_helmet_iron_trim.json
+    |   |   |       |   extended_netherite_helmet_lapis_trim.json
+    |   |   |       |   extended_netherite_helmet_netherite_darker_trim.json
+    |   |   |       |   extended_netherite_helmet_quartz_trim.json
+    |   |   |       |   extended_netherite_helmet_redstone_trim.json
+    |   |   |       |   extended_netherite_hoe.json
+    |   |   |       |   extended_netherite_leggings.json
+    |   |   |       |   extended_netherite_leggings_amethyst_trim.json
+    |   |   |       |   extended_netherite_leggings_copper_trim.json
+    |   |   |       |   extended_netherite_leggings_diamond_trim.json
+    |   |   |       |   extended_netherite_leggings_emerald_trim.json
+    |   |   |       |   extended_netherite_leggings_gold_trim.json
+    |   |   |       |   extended_netherite_leggings_iron_trim.json
+    |   |   |       |   extended_netherite_leggings_lapis_trim.json
+    |   |   |       |   extended_netherite_leggings_netherite_darker_trim.json
+    |   |   |       |   extended_netherite_leggings_quartz_trim.json
+    |   |   |       |   extended_netherite_leggings_redstone_trim.json
+    |   |   |       |   extended_netherite_pickaxe.json
+    |   |   |       |   extended_netherite_shovel.json
+    |   |   |       |   extended_netherite_sword.json
+    |   |   |       |   extended_shield.json
+    |   |   |       |   extended_shield_blocking.json
+    |   |   |       |   extended_stone_axe.json
+    |   |   |       |   extended_stone_hoe.json
+    |   |   |       |   extended_stone_pickaxe.json
+    |   |   |       |   extended_stone_shovel.json
+    |   |   |       |   extended_stone_sword.json
+    |   |   |       |   extended_trident.json
+    |   |   |       |   extended_trident_in_hand.json
+    |   |   |       |   extended_trident_throwing.json
+    |   |   |       |   extended_wooden_axe.json
+    |   |   |       |   extended_wooden_hoe.json
+    |   |   |       |   extended_wooden_pickaxe.json
+    |   |   |       |   extended_wooden_shovel.json
+    |   |   |       |   extended_wooden_sword.json
+    |   |   |       |   
+    |   |   |       \---base
+    |   |   |               extended_handheld.json
+    |   |   |               extended_handheld_mace.json
+    |   |   |               
+    |   |   \---textures
+    |   |       +---block
+    |   |       |       crafting_table_top_extended.png
+    |   |       |       extended_crafting_table_front_1.png
+    |   |       |       extended_crafting_table_front_2.png
+    |   |       |       extended_crafting_table_side_1.png
+    |   |       |       extended_crafting_table_side_2.png
+    |   |       |       
+    |   |       +---entity
+    |   |       |       extended_shield_base.png
+    |   |       |       extended_shield_base_nopattern.png
+    |   |       |       extended_trident.png
+    |   |       |       
+    |   |       +---gui
+    |   |       |   \---container
+    |   |       |           extended_crafting_table.png
+    |   |       |           
+    |   |       +---item
+    |   |       |       extended_bow.png
+    |   |       |       extended_bow_pulling_0.png
+    |   |       |       extended_bow_pulling_1.png
+    |   |       |       extended_bow_pulling_2.png
+    |   |       |       extended_bow_pulling_3.png
+    |   |       |       extended_chainmail_boots.png
+    |   |       |       extended_chainmail_chestplate.png
+    |   |       |       extended_chainmail_helmet.png
+    |   |       |       extended_chainmail_leggings.png
+    |   |       |       extended_crossbow_arrow.png
+    |   |       |       extended_crossbow_firework.png
+    |   |       |       extended_crossbow_pulling_0.png
+    |   |       |       extended_crossbow_pulling_1.png
+    |   |       |       extended_crossbow_pulling_2.png
+    |   |       |       extended_crossbow_pulling_3.png
+    |   |       |       extended_crossbow_standby.png
+    |   |       |       extended_diamond_axe.png
+    |   |       |       extended_diamond_boots.png
+    |   |       |       extended_diamond_chestplate.png
+    |   |       |       extended_diamond_helmet.png
+    |   |       |       extended_diamond_hoe.png
+    |   |       |       extended_diamond_leggings.png
+    |   |       |       extended_diamond_pickaxe.png
+    |   |       |       extended_diamond_shovel.png
+    |   |       |       extended_diamond_sword.png
+    |   |       |       extended_golden_axe.png
+    |   |       |       extended_golden_boots.png
+    |   |       |       extended_golden_chestplate.png
+    |   |       |       extended_golden_helmet.png
+    |   |       |       extended_golden_hoe.png
+    |   |       |       extended_golden_leggings.png
+    |   |       |       extended_golden_pickaxe.png
+    |   |       |       extended_golden_shovel.png
+    |   |       |       extended_golden_sword.png
+    |   |       |       extended_iron_axe.png
+    |   |       |       extended_iron_boots.png
+    |   |       |       extended_iron_chestplate.png
+    |   |       |       extended_iron_helmet.png
+    |   |       |       extended_iron_hoe.png
+    |   |       |       extended_iron_leggings.png
+    |   |       |       extended_iron_pickaxe.png
+    |   |       |       extended_iron_shovel.png
+    |   |       |       extended_iron_sword.png
+    |   |       |       extended_leather_boots.png
+    |   |       |       extended_leather_boots_overlay.png
+    |   |       |       extended_leather_chestplate.png
+    |   |       |       extended_leather_chestplate_overlay.png
+    |   |       |       extended_leather_helmet.png
+    |   |       |       extended_leather_helmet_overlay.png
+    |   |       |       extended_leather_leggings.png
+    |   |       |       extended_leather_leggings_overlay.png
+    |   |       |       extended_mace.png
+    |   |       |       extended_netherite_axe.png
+    |   |       |       extended_netherite_boots.png
+    |   |       |       extended_netherite_chestplate.png
+    |   |       |       extended_netherite_helmet.png
+    |   |       |       extended_netherite_hoe.png
+    |   |       |       extended_netherite_leggings.png
+    |   |       |       extended_netherite_pickaxe.png
+    |   |       |       extended_netherite_shovel.png
+    |   |       |       extended_netherite_sword.png
+    |   |       |       extended_stone_axe.png
+    |   |       |       extended_stone_hoe.png
+    |   |       |       extended_stone_pickaxe.png
+    |   |       |       extended_stone_shovel.png
+    |   |       |       extended_stone_sword.png
+    |   |       |       extended_trident.png
+    |   |       |       extended_wooden_axe.png
+    |   |       |       extended_wooden_hoe.png
+    |   |       |       extended_wooden_pickaxe.png
+    |   |       |       extended_wooden_shovel.png
+    |   |       |       extended_wooden_sword.png
+    |   |       |       netherite_helmet.png
+    |   |       |       
+    |   |       \---models
+    |   |           \---armor
+    |   |                   extended_chainmail_layer_1.png
+    |   |                   extended_chainmail_layer_2.png
+    |   |                   extended_diamond_layer_1.png
+    |   |                   extended_diamond_layer_2.png
+    |   |                   extended_gold_layer_1.png
+    |   |                   extended_gold_layer_2.png
+    |   |                   extended_iron_layer_1.png
+    |   |                   extended_iron_layer_2.png
+    |   |                   extended_leather_layer_1.png
+    |   |                   extended_leather_layer_1_overlay.png
+    |   |                   extended_leather_layer_2.png
+    |   |                   extended_leather_layer_2_overlay.png
+    |   |                   extended_netherite_layer_1.png
+    |   |                   extended_netherite_layer_2.png
+    |   |                   
+    |   \---minecraft
+    |       +---atlases
+    |       |       shield_patterns.json
+    |       |       
+    |       \---blockstates
+    |               crafting_table.json
+    |               
+    +---com
+    |   \---garouelcazador
+    |       \---extended_workbench
+    |           |   ExtendedWorkbench.java
+    |           |   
+    |           +---client
+    |           |   +---model
+    |           |   |   |   EWModelBakery.java
+    |           |   |   |   
+    |           |   |   +---custom
+    |           |   |   |       ExtendedShieldModel.java
+    |           |   |   |       ExtendedTridentModel.java
+    |           |   |   |       
+    |           |   |   \---geom
+    |           |   |           EWModelLayers.java
+    |           |   |           
+    |           |   \---renderer
+    |           |           EWItemRenderer.java
+    |           |           ExtendedShieldRenderer.java
+    |           |           ExtendedThrownTridentRenderer.java
+    |           |           ExtendedTridentRenderer.java
+    |           |           
+    |           +---config
+    |           |       EWServerConfig.java
+    |           |       
+    |           +---entities
+    |           |   |   EWEntities.java
+    |           |   |   
+    |           |   \---custom
+    |           |           ExtendedThrownTrident.java
+    |           |           
+    |           +---events
+    |           |       EWClientEvents.java
+    |           |       EWEvents.java
+    |           |       
+    |           +---items
+    |           |   |   EWItems.java
+    |           |   |   
+    |           |   \---custom
+    |           |           ExtendedBowItem.java
+    |           |           ExtendedCrossbowItem.java
+    |           |           ExtendedGoldenArmorItem.java
+    |           |           ExtendedHoeItem.java
+    |           |           ExtendedLeatherBoots.java
+    |           |           ExtendedShieldItem.java
+    |           |           ExtendedSwordItem.java
+    |           |           ExtendedTridentItem.java
+    |           |           
+    |           +---misc
+    |           |       EWArmorMaterials.java
+    |           |       EWCreativeModeTab.java
+    |           |       EWDataComponents.java
+    |           |       EWHelper.java
+    |           |       EWTiers.java
+    |           |       
+    |           +---mixins
+    |           |   |   AbstractSkeletonMixin.java
+    |           |   |   AttributeModifierIdFixMixin.java
+    |           |   |   BlockBehaviourMixin.java
+    |           |   |   BlockMixin.java
+    |           |   |   BowItemMixin.java
+    |           |   |   CraftingTableBlockMixin.java
+    |           |   |   CrossbowAttackMixin.java
+    |           |   |   CrossbowItemMixin.java
+    |           |   |   DrownedMixin.java
+    |           |   |   ItemStackMixin.java
+    |           |   |   LivingEntityMixin.java
+    |           |   |   MobMixin.java
+    |           |   |   PiglinBruteMixin.java
+    |           |   |   PiglinMixin.java
+    |           |   |   PillagerMixin.java
+    |           |   |   PlayerMixin.java
+    |           |   |   ProjectileWeaponItemMixin.java
+    |           |   |   RangedCrossbowAttackGoalMixin.java
+    |           |   |   ServerEntityMixin.java
+    |           |   |   VexMixin.java
+    |           |   |   VindicatorMixin.java
+    |           |   |   WitherSkeletonMixin.java
+    |           |   |   ZombieMixin.java
+    |           |   |   ZombifiedPiglinMixin.java
+    |           |   |   
+    |           |   \---client
+    |           |           AnimationUtilsMixin.java
+    |           |           DrownedModelMixin.java
+    |           |           ItemRendererMixin.java
+    |           |           ModelBakeryMixin.java
+    |           |           SkeletonModelMixin.java
+    |           |           
+    |           \---screens
+    |               \---inventory
+    |                       EWMenuTypes.java
+    |                       ExtendedCraftingMenu.java
+    |                       ExtendedCraftingScreen.java
+    |                       
+    +---data
+    |   +---extended_workbench
+    |   |   \---recipe
+    |   |           extended_bow.json
+    |   |           extended_crossbow.json
+    |   |           extended_diamond_axe.json
+    |   |           extended_diamond_boots.json
+    |   |           extended_diamond_chestplate.json
+    |   |           extended_diamond_helmet.json
+    |   |           extended_diamond_hoe.json
+    |   |           extended_diamond_leggings.json
+    |   |           extended_diamond_pickaxe.json
+    |   |           extended_diamond_shovel.json
+    |   |           extended_diamond_sword.json
+    |   |           extended_golden_axe.json
+    |   |           extended_golden_boots.json
+    |   |           extended_golden_chestplate.json
+    |   |           extended_golden_helmet.json
+    |   |           extended_golden_hoe.json
+    |   |           extended_golden_leggings.json
+    |   |           extended_golden_pickaxe.json
+    |   |           extended_golden_shovel.json
+    |   |           extended_golden_sword.json
+    |   |           extended_iron_axe.json
+    |   |           extended_iron_boots.json
+    |   |           extended_iron_chestplate.json
+    |   |           extended_iron_helmet.json
+    |   |           extended_iron_hoe.json
+    |   |           extended_iron_leggings.json
+    |   |           extended_iron_pickaxe.json
+    |   |           extended_iron_shovel.json
+    |   |           extended_iron_sword.json
+    |   |           extended_leather_boots.json
+    |   |           extended_leather_chestplate.json
+    |   |           extended_leather_helmet.json
+    |   |           extended_leather_leggings.json
+    |   |           extended_mace.json
+    |   |           extended_netherite_axe_smithing.json
+    |   |           extended_netherite_boots_smithing.json
+    |   |           extended_netherite_chestplate_smithing.json
+    |   |           extended_netherite_helmet_smithing.json
+    |   |           extended_netherite_hoe_smithing.json
+    |   |           extended_netherite_leggings_smithing.json
+    |   |           extended_netherite_pickaxe_smithing.json
+    |   |           extended_netherite_shovel_smithing.json
+    |   |           extended_netherite_sword_smithing.json
+    |   |           extended_shield.json
+    |   |           extended_stone_axe.json
+    |   |           extended_stone_hoe.json
+    |   |           extended_stone_pickaxe.json
+    |   |           extended_stone_shovel.json
+    |   |           extended_stone_sword.json
+    |   |           extended_wooden_axe.json
+    |   |           extended_wooden_hoe.json
+    |   |           extended_wooden_pickaxe.json
+    |   |           extended_wooden_shovel.json
+    |   |           extended_wooden_sword.json
+    |   |           
+    |   +---forge
+    |   |   \---tags
+    |   |       \---items
+    |   |           +---armors
+    |   |           |       boots.json
+    |   |           |       chestplates.json
+    |   |           |       helmets.json
+    |   |           |       leggings.json
+    |   |           |       
+    |   |           \---tools
+    |   |                   bows.json
+    |   |                   crossbows.json
+    |   |                   
+    |   \---minecraft
+    |       \---tags
+    |           \---item
+    |               |   axes.json
+    |               |   chest_armor.json
+    |               |   dyeable.json
+    |               |   foot_armor.json
+    |               |   freeze_immune_wearables.json
+    |               |   head_armor.json
+    |               |   hoes.json
+    |               |   leg_armor.json
+    |               |   pickaxes.json
+    |               |   piglin_loved.json
+    |               |   shovels.json
+    |               |   swords.json
+    |               |   trimmable_armor.json
+    |               |   
+    |               \---enchantable
+    |                       bow.json
+    |                       crossbow.json
+    |                       durability.json
+    |                       fire_aspect.json
+    |                       mace.json
+    |                       trident.json
+    |                       weapon.json
+    |                       
+    \---META-INF
+        |   accesstransformer.cfg
+        |   MANIFEST.MF
+        |   mods.toml
+        |   
+        \---jarjar
+                metadata.json
+                

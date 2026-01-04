@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_diamond_sword",
+    "extended_workbench:extended_stone_sword",
+    "extended_workbench:extended_golden_sword",
+    "extended_workbench:extended_netherite_sword",
+    "extended_workbench:extended_wooden_sword",
+    "extended_workbench:extended_iron_sword"
+  ]
+}

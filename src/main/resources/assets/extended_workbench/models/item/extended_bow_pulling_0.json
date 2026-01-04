@@ -1,0 +1,6 @@
+{
+    "parent": "extended_workbench:item/extended_bow",
+    "textures": {
+        "layer0": "extended_workbench:item/extended_bow_pulling_0"
+    }
+}

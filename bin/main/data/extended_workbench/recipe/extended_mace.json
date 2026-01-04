@@ -1,0 +1,26 @@
+{
+  "type": "extended_workbench:extended_crafting",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:heavy_core"
+    },
+    "I": {
+      "item": "minecraft:breeze_rod"
+    },
+    "W": {
+      "item": "minecraft:wind_charge"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "W#W",
+    "W#W",
+    " I ",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "extended_workbench:extended_mace"
+  }
+}

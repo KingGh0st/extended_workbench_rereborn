@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_diamond_pickaxe",
+    "extended_workbench:extended_stone_pickaxe",
+    "extended_workbench:extended_golden_pickaxe",
+    "extended_workbench:extended_netherite_pickaxe",
+    "extended_workbench:extended_wooden_pickaxe",
+    "extended_workbench:extended_iron_pickaxe"
+  ]
+}

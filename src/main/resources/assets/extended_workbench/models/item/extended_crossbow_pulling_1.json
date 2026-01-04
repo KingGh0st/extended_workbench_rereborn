@@ -1,0 +1,6 @@
+{
+    "parent": "extended_workbench:item/extended_crossbow",
+    "textures": {
+        "layer0": "extended_workbench:item/extended_crossbow_pulling_1"
+    }
+}

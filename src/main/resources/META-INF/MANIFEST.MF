@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: extended_workbench
+Specification-Vendor: GarouElCazador
+Specification-Version: 1
+Implementation-Title: extended_workbench_1.21
+Implementation-Version: 1.21-1.2.3
+Implementation-Vendor: GarouElCazador
+MixinConfigs: extended_workbench.mixins.json
+

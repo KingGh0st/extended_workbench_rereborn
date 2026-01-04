@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+[[mods]]
+modId="extended_workbench"
+version="1.21-1.2.3"
+displayName="Extended Workbench"
+logoFile="extended_workbench.png"
+credits="Naruto1310 for being the original creator."
+authors="GarouElCazador"
+description='''Upgrade your workbench, upgrade your life.
+
+Original mod: https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1282775-extended-workbench-v1-4-2'''
+
+[[dependencies.extended_workbench]]
+    modId="neoforge"
+    mandatory=true
+    versionRange="[21,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.extended_workbench]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21,1.22)"
+    ordering="NONE"
+    side="BOTH"
+
+# JEI dependency removed for local dev runs (temporary).
+# Re-add before release if integration with JEI is required.
+
+[[mixins]]
+    config="extended_workbench.mixins.json"

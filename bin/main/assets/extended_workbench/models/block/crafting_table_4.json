@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "down": "minecraft:block/oak_planks",
+        "east": "extended_workbench:block/extended_crafting_table_side_1",
+        "north": "minecraft:block/crafting_table_front",
+        "particle": "minecraft:block/crafting_table_front",
+        "south": "minecraft:block/crafting_table_side",
+        "up": "extended_workbench:block/crafting_table_top_extended",
+        "west": "extended_workbench:block/extended_crafting_table_front_2"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "up":    { "texture": "#up", "cullface": "up", "rotation": 270 },
+                "north": { "texture": "#north", "cullface": "north" },
+                "south": { "texture": "#south", "cullface": "south" },
+                "west":  { "texture": "#west", "cullface": "west" },
+                "east":  { "texture": "#east", "cullface": "east" },
+                "down":  { "texture": "#down", "cullface": "down" }
+            }
+        }
+    ]
+}

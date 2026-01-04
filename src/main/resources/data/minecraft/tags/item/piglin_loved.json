@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_golden_helmet",
+    "extended_workbench:extended_golden_chestplate",
+    "extended_workbench:extended_golden_leggings",
+    "extended_workbench:extended_golden_boots",
+    "extended_workbench:extended_golden_horse_armor",
+    "extended_workbench:extended_golden_sword",
+    "extended_workbench:extended_golden_pickaxe",
+    "extended_workbench:extended_golden_shovel",
+    "extended_workbench:extended_golden_axe",
+    "extended_workbench:extended_golden_hoe"
+  ]
+}

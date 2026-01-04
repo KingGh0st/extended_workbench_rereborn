@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_diamond_shovel",
+    "extended_workbench:extended_stone_shovel",
+    "extended_workbench:extended_golden_shovel",
+    "extended_workbench:extended_netherite_shovel",
+    "extended_workbench:extended_wooden_shovel",
+    "extended_workbench:extended_iron_shovel"
+  ]
+}

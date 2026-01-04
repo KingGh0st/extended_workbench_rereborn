@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:item/generated",
+  "display": {
+    "ground": {
+      "translation": [ 0, 3, 0 ],
+      "scale": [ 1.3333, 1.3333, 0.75 ]
+    },
+    "gui": {
+      "scale": [ 1.3333, 1.3333, 1 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 180, 0 ],
+      "scale": [ 1.3333, 1.3333, 1 ]
+    }
+  },
+  "textures": {
+    "layer0": "extended_workbench:item/extended_trident"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_leather_boots",
+    "extended_workbench:extended_chainmail_boots",
+    "extended_workbench:extended_iron_boots",
+    "extended_workbench:extended_golden_boots",
+    "extended_workbench:extended_diamond_boots",
+    "extended_workbench:extended_netherite_boots"
+  ]
+}

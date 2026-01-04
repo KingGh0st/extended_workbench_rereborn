@@ -1,0 +1,24 @@
+{
+  "type": "extended_workbench:extended_crafting",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "X  ",
+    "XXX",
+    "X# ",
+    " # ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "extended_workbench:extended_iron_axe"
+  }
+}

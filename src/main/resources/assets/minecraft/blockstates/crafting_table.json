@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "extended=0": {
+      "model": "minecraft:block/crafting_table"
+    },
+    "extended=1": {
+      "model": "extended_workbench:block/crafting_table_1"
+    },
+    "extended=2": {
+      "model": "extended_workbench:block/crafting_table_2"
+    },
+    "extended=3": {
+      "model": "extended_workbench:block/crafting_table_3"
+    },
+    "extended=4": {
+      "model": "extended_workbench:block/crafting_table_4"
+    }
+  }
+}

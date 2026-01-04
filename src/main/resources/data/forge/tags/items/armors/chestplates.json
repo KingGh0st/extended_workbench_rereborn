@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_leather_chestplate",
+    "extended_workbench:extended_chainmail_chestplate",
+    "extended_workbench:extended_iron_chestplate",
+    "extended_workbench:extended_golden_chestplate",
+    "extended_workbench:extended_diamond_chestplate",
+    "extended_workbench:extended_netherite_chestplate"
+  ]
+}

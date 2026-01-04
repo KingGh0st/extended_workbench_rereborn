@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_leather_helmet",
+    "extended_workbench:extended_chainmail_helmet",
+    "extended_workbench:extended_golden_helmet",
+    "extended_workbench:extended_iron_helmet",
+    "extended_workbench:extended_diamond_helmet",
+    "extended_workbench:extended_netherite_helmet"
+  ]
+}

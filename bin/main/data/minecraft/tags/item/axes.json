@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_diamond_axe",
+    "extended_workbench:extended_stone_axe",
+    "extended_workbench:extended_golden_axe",
+    "extended_workbench:extended_netherite_axe",
+    "extended_workbench:extended_wooden_axe",
+    "extended_workbench:extended_iron_axe"
+  ]
+}

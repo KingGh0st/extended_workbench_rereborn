@@ -1,0 +1,45 @@
+{
+  "required": true,
+  "package": "com.garouelcazador.extended_workbench.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "client.AnimationUtilsMixin",
+    "client.DrownedModelMixin",
+    "client.ItemRendererMixin",
+    "client.ModelBakeryMixin",
+    "client.SkeletonModelMixin"
+  ],
+  "mixins": [
+    "AbstractSkeletonMixin",
+    "AttributeModifierIdFixMixin",
+    "BlockBehaviourMixin",
+    "BlockMixin",
+    "BowItemMixin",
+    "CraftingTableBlockMixin",
+    "CrossbowAttackMixin",
+    "CrossbowItemMixin",
+    "DrownedMixin",
+    "ItemStackMixin",
+    "LivingEntityMixin",
+    "MobMixin",
+    "PiglinBruteMixin",
+    "PiglinMixin",
+    "PillagerMixin",
+    "PlayerMixin",
+    "ProjectileWeaponItemMixin",
+    "RangedCrossbowAttackGoalMixin",
+    "ServerEntityMixin",
+    "VexMixin",
+    "VindicatorMixin",
+    "WitherSkeletonMixin",
+    "ZombieMixin",
+    "ZombifiedPiglinMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixinextras": {
+    "minVersion": "0.5.0"
+  },
+  "minVersion": "0.8"
+}

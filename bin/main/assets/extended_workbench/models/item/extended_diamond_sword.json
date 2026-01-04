@@ -1,0 +1,6 @@
+{
+  "parent": "extended_workbench:item/base/extended_handheld",
+  "textures": {
+    "layer0": "extended_workbench:item/extended_diamond_sword"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_leather_leggings",
+    "extended_workbench:extended_chainmail_leggings",
+    "extended_workbench:extended_golden_leggings",
+    "extended_workbench:extended_iron_leggings",
+    "extended_workbench:extended_diamond_leggings",
+    "extended_workbench:extended_netherite_leggings"
+  ]
+}

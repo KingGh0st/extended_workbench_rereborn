@@ -1,0 +1,8 @@
+{
+    "sources": [
+        {
+            "type": "single",
+            "resource": "extended_workbench:entity/extended_shield_base_nopattern"
+        }
+    ]
+}

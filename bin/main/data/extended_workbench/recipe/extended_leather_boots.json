@@ -1,0 +1,18 @@
+{
+  "type": "extended_workbench:extended_crafting",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "minecraft:leather"
+    }
+  },
+  "pattern": [
+    "X X",
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "extended_workbench:extended_leather_boots"
+  }
+}

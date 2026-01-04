@@ -1,0 +1,24 @@
+{
+  "type": "extended_workbench:extended_crafting",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "c:rods/wooden"
+    },
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    " X",
+    "XX",
+    " #",
+    " #",
+    " #",
+    " #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "extended_workbench:extended_wooden_hoe"
+  }
+}

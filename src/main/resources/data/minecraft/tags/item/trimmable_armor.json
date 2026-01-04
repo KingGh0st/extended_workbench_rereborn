@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "extended_workbench:extended_netherite_helmet",
+    "extended_workbench:extended_netherite_chestplate",
+    "extended_workbench:extended_netherite_leggings",
+    "extended_workbench:extended_netherite_boots",
+    "extended_workbench:extended_diamond_helmet",
+    "extended_workbench:extended_diamond_chestplate",
+    "extended_workbench:extended_diamond_leggings",
+    "extended_workbench:extended_diamond_boots",
+    "extended_workbench:extended_golden_helmet",
+    "extended_workbench:extended_golden_chestplate",
+    "extended_workbench:extended_golden_leggings",
+    "extended_workbench:extended_golden_boots",
+    "extended_workbench:extended_iron_helmet",
+    "extended_workbench:extended_iron_chestplate",
+    "extended_workbench:extended_iron_leggings",
+    "extended_workbench:extended_iron_boots",
+    "extended_workbench:extended_chainmail_helmet",
+    "extended_workbench:extended_chainmail_chestplate",
+    "extended_workbench:extended_chainmail_leggings",
+    "extended_workbench:extended_chainmail_boots",
+    "extended_workbench:extended_leather_helmet",
+    "extended_workbench:extended_leather_chestplate",
+    "extended_workbench:extended_leather_leggings",
+    "extended_workbench:extended_leather_boots"
+  ]
+}
