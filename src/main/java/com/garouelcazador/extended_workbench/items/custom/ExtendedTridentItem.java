@@ -100,8 +100,10 @@ public class ExtendedTridentItem extends TridentItem {
       return 72000;
    }
 
+   @Override
    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
       consumer.accept(new IClientItemExtensions() {
+         @Override
          public BlockEntityWithoutLevelRenderer getCustomRenderer() {
             return ExtendedTridentRenderer.INSTANCE;
          }

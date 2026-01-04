@@ -27,6 +27,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
 public final class EWClientEvents {
@@ -39,27 +40,50 @@ public final class EWClientEvents {
       @SubscribeEvent
       public static void onClientSetup(FMLClientSetupEvent event) {
          event.enqueueWork(() -> {
-               // Propiedades del Arco
-               ItemProperties.register(EWItems.EXTENDED_BOW.get(), ResourceLocation.withDefaultNamespace("pull"), (pStack, pLevel, pEntity, pSeed) -> {
-                  if (pEntity == null) return 0.0F;
-                  return pEntity.getUseItem() != pStack ? 0.0F : (float)(pStack.getUseDuration(pEntity) - pEntity.getUseItemRemainingTicks()) / 20.0F;
-               });
-               ItemProperties.register(EWItems.EXTENDED_BOW.get(), ResourceLocation.withDefaultNamespace("pulling"), (pStack, pLevel, pEntity, pSeed) -> {
-                  return pEntity != null && pEntity.isUsingItem() && pEntity.getUseItem() == pStack ? 1.0F : 0.0F;
-               });
+            //Bow
+            ItemProperties.register(EWItems.EXTENDED_BOW.get(), ResourceLocation.withDefaultNamespace("pull"), (pStack, pLevel, pEntity, pSeed) -> {
+               if (pEntity == null) return 0.0F;
+               return pEntity.getUseItem() != pStack ? 0.0F : (float)(pStack.getUseDuration(pEntity) - pEntity.getUseItemRemainingTicks()) / 20.0F;
+            });
+            ItemProperties.register(EWItems.EXTENDED_BOW.get(), ResourceLocation.withDefaultNamespace("pulling"), (pStack, pLevel, pEntity, pSeed) -> {
+               return pEntity != null && pEntity.isUsingItem() && pEntity.getUseItem() == pStack ? 1.0F : 0.0F;
+            });
 
-               // Propiedades de la Ballesta
-               ItemProperties.register(EWItems.EXTENDED_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("pull"), (pStack, pLevel, pEntity, pSeed) -> {
-                  if (pEntity == null) return 0.0F;
-                  return CrossbowItem.isCharged(pStack) ? 0.0F : (float)(pStack.getUseDuration(pEntity) - pEntity.getUseItemRemainingTicks()) / (float)CrossbowItem.getChargeDuration(pStack, pEntity);
-               });
-               // ... (puedes seguir añadiendo las demás propiedades igual que las tenías)
+            //Crossbow
+            ItemProperties.register(EWItems.EXTENDED_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("pull"), (pStack, pLevel, pEntity, pSeed) -> {
+               if (pEntity == null) return 0.0F;
+               return CrossbowItem.isCharged(pStack) ? 0.0F : (float)(pStack.getUseDuration(pEntity) - pEntity.getUseItemRemainingTicks()) / (float)CrossbowItem.getChargeDuration(pStack, pEntity);
+            });
+            ItemProperties.register(EWItems.EXTENDED_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("pulling"), (pStack, pLevel, pEntity, pSeed) -> {
+               return pEntity != null && pEntity.isUsingItem() && pEntity.getUseItem() == pStack && !CrossbowItem.isCharged(pStack) ? 1.0F : 0.0F;
+            });
+            ItemProperties.register(EWItems.EXTENDED_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("charged"), (pStack, pLevel, pEntity, pSeed) -> {
+               return CrossbowItem.isCharged(pStack) ? 1.0F : 0.0F;
+            });
+            ItemProperties.register(EWItems.EXTENDED_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("firework"), (pStack, pLevel, pEntity, pSeed) -> {
+               ChargedProjectiles charged = pStack.get(DataComponents.CHARGED_PROJECTILES);
+               return charged != null && charged.contains(Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            });
 
-               // Colores de armadura de cuero
-               net.minecraft.client.Minecraft.getInstance().getItemColors().register((itemStack, color) -> {
-                  return color > 0 ? -1 : DyedItemColor.getOrDefault(itemStack, -6265536);
-               }, EWItems.EXTENDED_LEATHER_HELMET.get(), EWItems.EXTENDED_LEATHER_CHESTPLATE.get(), EWItems.EXTENDED_LEATHER_LEGGINGS.get(), EWItems.EXTENDED_LEATHER_BOOTS.get());
+            //Shield
+            ItemProperties.register(EWItems.EXTENDED_SHIELD.get(), ResourceLocation.withDefaultNamespace("blocking"), (pStack, pLevel, pEntity, pSeed) -> {
+               return pEntity != null && pEntity.isUsingItem() && pEntity.getUseItem() == pStack ? 1.0F : 0.0F;
+            });
+
+            //Trident
+            ItemProperties.register(EWItems.EXTENDED_TRIDENT.get(), ResourceLocation.withDefaultNamespace("throwing"), (pStack, pLevel, pEntity, pSeed) -> {
+               return pEntity != null && pEntity.isUsingItem() && pEntity.getUseItem() == pStack ? 1.0F : 0.0F;
+            });
          });
+      }
+
+      //Leather colors
+      @SubscribeEvent
+      public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+            event.register((itemStack, color) -> {
+               return color > 0 ? -1 : DyedItemColor.getOrDefault(itemStack, -6265536);
+            }, EWItems.EXTENDED_LEATHER_HELMET.get(), EWItems.EXTENDED_LEATHER_CHESTPLATE.get(), 
+               EWItems.EXTENDED_LEATHER_LEGGINGS.get(), EWItems.EXTENDED_LEATHER_BOOTS.get());
       }
 
       @SubscribeEvent

@@ -17,10 +17,10 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.projectile.AbstractArrow.Pickup;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.ItemLike;
@@ -70,7 +70,6 @@ public class ExtendedThrownTrident extends AbstractArrow {
             if (!this.level().isClientSide && this.pickup == Pickup.ALLOWED) {
                this.spawnAtLocation(this.getPickupItem(), 0.1F);
             }
-
             this.discard();
          } else {
             this.setNoPhysics(true);
@@ -79,17 +78,14 @@ public class ExtendedThrownTrident extends AbstractArrow {
             if (this.level().isClientSide) {
                this.yOld = this.getY();
             }
-
             double d0 = 0.05D * (double)i;
             this.setDeltaMovement(this.getDeltaMovement().scale(0.95D).add(vec3.normalize().scale(d0)));
             if (this.clientSideReturnTridentTickCount == 0) {
                this.playSound(SoundEvents.TRIDENT_RETURN, 10.0F, 1.0F);
             }
-
             ++this.clientSideReturnTridentTickCount;
          }
       }
-
       super.tick();
    }
 
@@ -110,13 +106,11 @@ public class ExtendedThrownTrident extends AbstractArrow {
    protected void onHitEntity(EntityHitResult p_37573_) {
       Entity entity = p_37573_.getEntity();
       float f = 12.0F;
-      Entity entity1 = this.getOwner();
-      DamageSource damagesource = this.damageSources().trident(this, (Entity)(entity1 == null ? this : entity1));
-      Level var7 = this.level();
-      ServerLevel serverlevel1;
-      if (var7 instanceof ServerLevel) {
-         serverlevel1 = (ServerLevel)var7;
-         f = EnchantmentHelper.modifyDamage(serverlevel1, this.getWeaponItem(), entity, damagesource, f);
+      Entity owner = this.getOwner();
+      DamageSource damagesource = this.damageSources().trident(this, (Entity)(owner == null ? this : owner));
+      
+      if (this.level() instanceof ServerLevel serverlevel) {
+         f = EnchantmentHelper.modifyDamage(serverlevel, this.getWeaponItem(), entity, damagesource, f);
       }
 
       this.dealtDamage = true;
@@ -125,14 +119,28 @@ public class ExtendedThrownTrident extends AbstractArrow {
             return;
          }
 
-         var7 = this.level();
-         if (var7 instanceof ServerLevel) {
-            serverlevel1 = (ServerLevel)var7;
+         if (this.level() instanceof ServerLevel serverlevel1) {
             EnchantmentHelper.doPostAttackEffectsWithItemSource(serverlevel1, entity, damagesource, this.getWeaponItem());
+         
+            if (serverlevel1.isThundering()) {
+               var registry = serverlevel1.registryAccess().registryOrThrow(net.minecraft.core.registries.Registries.ENCHANTMENT);
+               var channelingHolder = registry.getHolderOrThrow(net.minecraft.world.item.enchantment.Enchantments.CHANNELING);
+
+               if (EnchantmentHelper.getItemEnchantmentLevel(channelingHolder, this.getWeaponItem()) > 0) {
+                     if (serverlevel1.canSeeSky(entity.blockPosition())) {
+                        LightningBolt lightningbolt = EntityType.LIGHTNING_BOLT.create(serverlevel1);
+                        if (lightningbolt != null) {
+                           lightningbolt.moveTo(Vec3.atBottomCenterOf(entity.blockPosition()));
+                           lightningbolt.setCause(owner instanceof ServerPlayer ? (ServerPlayer)owner : null);
+                           serverlevel1.addFreshEntity(lightningbolt);
+                           this.playSound(SoundEvents.TRIDENT_THUNDER.value(), 5.0F, 1.0F);
+                        }
+                     }
+               }
+            }
          }
 
-         if (entity instanceof LivingEntity) {
-            LivingEntity livingentity = (LivingEntity)entity;
+         if (entity instanceof LivingEntity livingentity) {
             this.doKnockback(livingentity, damagesource);
             this.doPostHurtEffects(livingentity);
          }
@@ -144,16 +152,10 @@ public class ExtendedThrownTrident extends AbstractArrow {
 
    protected void hitBlockEnchantmentEffects(ServerLevel p_344367_, BlockHitResult p_343898_, ItemStack p_344547_) {
       Vec3 vec3 = p_343898_.getBlockPos().clampLocationWithin(p_343898_.getLocation());
-      Entity var6 = this.getOwner();
-      LivingEntity var10002;
-      if (var6 instanceof LivingEntity) {
-         LivingEntity livingentity = (LivingEntity)var6;
-         var10002 = livingentity;
-      } else {
-         var10002 = null;
-      }
+      Entity owner = this.getOwner();
+      LivingEntity livingOwner = owner instanceof LivingEntity ? (LivingEntity)owner : null;
 
-      EnchantmentHelper.onHitBlock(p_344367_, p_344547_, var10002, this, (EquipmentSlot)null, vec3, p_344367_.getBlockState(p_343898_.getBlockPos()), (p_343806_) -> {
+      EnchantmentHelper.onHitBlock(p_344367_, p_344547_, livingOwner, this, (EquipmentSlot)null, vec3, p_344367_.getBlockState(p_343898_.getBlockPos()), (p_343806_) -> {
          this.kill();
       });
    }
@@ -180,7 +182,6 @@ public class ExtendedThrownTrident extends AbstractArrow {
       if (this.ownedBy(p_37580_) || this.getOwner() == null) {
          super.playerTouch(p_37580_);
       }
-
    }
 
    public void readAdditionalSaveData(@NotNull CompoundTag p_37578_) {
@@ -195,16 +196,11 @@ public class ExtendedThrownTrident extends AbstractArrow {
    }
 
    private byte getLoyaltyFromItem(ItemStack p_343400_) {
-      Level var3 = this.level();
-      byte var10000;
-      if (var3 instanceof ServerLevel) {
-         ServerLevel serverlevel = (ServerLevel)var3;
-         var10000 = (byte)Mth.clamp(EnchantmentHelper.getTridentReturnToOwnerAcceleration(serverlevel, p_343400_, this), 0, 127);
-      } else {
-         var10000 = 0;
+      Level level = this.level();
+      if (level instanceof ServerLevel serverlevel) {
+         return (byte)Mth.clamp(EnchantmentHelper.getTridentReturnToOwnerAcceleration(serverlevel, p_343400_, this), 0, 127);
       }
-
-      return var10000;
+      return 0;
    }
 
    public void tickDespawn() {
@@ -212,7 +208,6 @@ public class ExtendedThrownTrident extends AbstractArrow {
       if (this.pickup != Pickup.ALLOWED || i <= 0) {
          super.tickDespawn();
       }
-
    }
 
    protected float getWaterInertia() {
