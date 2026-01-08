@@ -1,6 +1,6 @@
 {
     "replace": false,
     "values": [
-    "extended_workbench:extended_trident"
+        "extended_workbench:extended_trident"
     ]
 }

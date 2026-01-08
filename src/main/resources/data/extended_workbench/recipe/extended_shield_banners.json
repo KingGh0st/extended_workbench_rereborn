@@ -1,0 +1,6 @@
+{
+    "type" : "minecraft:shield_decoration",
+    "template": {
+        "item": "extended_workbench:extended_shield"
+    }
+}
